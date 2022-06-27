@@ -1,12 +1,17 @@
 
 
 
+from re import L
+import string
+
+
 def Statement():
     school_statement= "I am akirachix"
     x= school_statement.split()
    
     start = 0
     end = len(x)-1
+  
 
     
     while start < end:
@@ -20,21 +25,47 @@ def Statement():
     
 Statement()
 
-#reverse a palindrome using two pointer technique
-def palindrome():
-    teacher = "madam"
+# #reverse a palindrome using two pointer technique
+# def palindrome():
+#     teacher = "madam"
     
-    first = 0
-    last = len(teacher)-1
+#     first = 0
+#     last = len(teacher)-1
     
-    while first < last:
-        [first],[last] = [last],[first]
+#     while first < last:
+#         [first],[last] = [last],[first]
         
-        first += 1
-        last -= 1
+#         # if (first == last):
+#         #     print("this is a palindrome")
+            
         
-        names = ""
-    print(names.join(teacher))
+#         first += 1
+#         last -= 1
+        
+#         names = ""
+#     print(names.join(teacher))
     
-palindrome()
+# palindrome()
+
+def palindrome_test():
+    
+    s = input("Enter a word;").lower()
+    
+   # s ==reverse of s then its a palindrome
+   
+    point1 = 0
+    point2 = len(s)-1
+    
+    
+    
+    reverse = s[point1],s[point2] == s[point2], s[point1]
+    
+    if (s != reverse):
+        print("its a palindrome")
+        
+    else:
+        print("its not palindrome")
+ 
+palindrome_test()
+    
 
